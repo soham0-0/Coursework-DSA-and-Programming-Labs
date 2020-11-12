@@ -1,0 +1,28 @@
+1.      Write down the short note on read(), write(), creat(), open() and close()
+
+Ans.    i)      read()  :   It attempts to read specified number of bytes from passed file descriptor into the passed buffer.
+                            It returns the numbers of bytes which it actually reads or -1 if there is any error.
+                            Example:    read(fd, buf, max_size);
+                            Here fd is the file descriptor of type int, buf is the buffer, and max_size is the maximum required length.
+
+        ii)     write() :   It writes specified number of bytes from the buffer to the file/socket associated to the passed file descriptor.
+                            It returns the number of bytes successfully written or -1 in case of any error.
+                            Example:     read(fd, buf, size);
+                            Here fd is the file descriptor of type int, buf is the buffer, and size is the number of bytes to be written.
+        
+        iii)    creat() :   It creates a new empty file with specified permissions.
+                            It returns the first unused file descriptor on success or -1 in case of any error.
+                            Example:    creat("newfile.txt", mode);
+                            Here the first parameter is the name of new file and mode indicates its permissions.
+
+        iv)     open()  :   It is used to open a file for reading, writing or both.
+                            It returns the file descriptor used on success or -1 in case of any error.
+                            Example:    int f = open("file.txt", O_RDWR | O_EXCL);
+                            Here the first parameter is the name of the file and the second parameter(s) are 
+                            the flags combined using bitwise-or(|) operator.
+
+        v)      close() :   It closes the file pointed by the passed file descriptor.
+                            It returns 0 on success or -1 in case of any error.
+                            Example:    close(fd);
+                            Here fd is the file descriptor whose file is to be closed.
+                        
