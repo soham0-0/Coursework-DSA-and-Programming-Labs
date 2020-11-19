@@ -1,0 +1,13 @@
+Q.  Study opendir(), readdir() and closedir(). Write short notes on them.
+
+A.  i)      opendir()   :   The opendir() function  opens a directory stream corresponding to the
+                            directory name, and returns a pointer(or NULL in case of error) to the directory stream(DIR pointer).   
+                            The stream is positioned at the first entry in the directory.
+    
+    ii)     readdir()   :   The readdir() function returns a pointer to a dirent structure representing 
+                            the next directory entry in the directory stream pointed to by DIR pointer. 
+                            It returns NULL on reaching the end of the directory stream or an error occurred.
+    
+    iii)    closedir()  :   The closedir() function closes the directory stream associated with DIR pointer.  
+                            A successful call to closedir() also closes the underlying file descriptor associated with DIR pointer.  
+                            The directory stream descriptor DIR pointer is not available after this call.
