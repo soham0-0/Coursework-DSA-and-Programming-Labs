@@ -1,4 +1,4 @@
-/  Solve Assignment 6 by assuming n=4.
+//  Solve Assignment 6 by assuming n=4.
 
 #include<stdio.h>
 #include<stdlib.h>
