@@ -8,7 +8,7 @@ public class p2_car_properties {
 class Car {
     String type, colour, make, gearType;
     double mileage, cost;
-    Car(String type, String colour, String make, String gearType, double cost, double mileage) {
+    Car(String type, String colour, String make, String gearType, double mileage, double cost) {
         this.type = type;
         this.colour = colour;
         this.make = make;
