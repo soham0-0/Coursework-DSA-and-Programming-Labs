@@ -1,19 +1,19 @@
 clc; %clearing console
 
-m = 0:1:50;
-y = 2.*m.*(0.9.^m);
-noise = 2*rand(1, length(m));
-x = y + noise;
+t = 0:0.5:50;
+m = rand(1, length(t));
+noise = 2.*m.*(0.9.^m);
+y = 2*sin(t);
+yN = y + noise;
 
-subplot(311), stem(m, y, "filled");
+subplot(311), plot(t, y);
 title("Uncorrupted Signal");
 xlabel("time");
 
-subplot(312), stem(m, noise, "filled");
+subplot(312), plot(t, noise);
 title("Noise Signal");
 xlabel("time");
 
-subplot(313), stem(m, x, "filled");
+subplot(313), plot(t, yN);
 title("Noisy Sequence");
 xlabel("time");
-
